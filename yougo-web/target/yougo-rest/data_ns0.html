@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+<link rel="stylesheet" type="text/css" href="default.css" media="screen"/>
+<title>YouGO - Main Webapp</title>
+</head>
+<body>
+<div class="container">
+<div class="main">
+<div class="header">
+<div class="title">
+<h1>YouGO - Main Webapp</h1>
+</div>
+</div>
+<div class="content">
+<div class="item">
+<h1>Data</h1>
+<ul>
+<li>Default Namespace</li>
+<li>XML Schema File: <a href="ns0.xsd">ns0.xsd</a>
+</li>
+</ul>
+<p>The data in this namespace is divided into elements and types. Types define the structure
+                    of the data. Elements define specific instances of the types, and are therefore more relevant to
+                    REST endpoints, which generally consume and/or produce elements.</p>
+<p>
+                      The following elements are members of this namespace:
+                    </p>
+<ul>
+<li>
+<a href="#element_constraintViolation">constraintViolation</a>
+</li>
+<li>
+<a href="#element_detailedUserDto">detailedUserDto</a>
+</li>
+<li>
+<a href="#element_requestDto">requestDto</a>
+</li>
+<li>
+<a href="#element_requestStatusDto">requestStatusDto</a>
+</li>
+<li>
+<a href="#element_requestTypeDto">requestTypeDto</a>
+</li>
+<li>
+<a href="#element_userDto">userDto</a>
+</li>
+<li>
+<a href="#element_userTypeDto">userTypeDto</a>
+</li>
+</ul>
+<p>
+                      The following types are members of this namespace:
+                    </p>
+<ul>
+<li>
+<a href="#constraintViolation">constraintViolation</a>
+</li>
+<li>
+<a href="#detailedUserDto">detailedUserDto</a>
+</li>
+<li>
+<a href="#requestDto">requestDto</a>
+</li>
+<li>
+<a href="#requestStatusDto">requestStatusDto</a>
+</li>
+<li>
+<a href="#requestTypeDto">requestTypeDto</a>
+</li>
+<li>
+<a href="#userDto">userDto</a>
+</li>
+<li>
+<a href="#userTypeDto">userTypeDto</a>
+</li>
+</ul>
+</div>
+<div class="item">
+<h1>
+<a name="element_constraintViolation">Element constraintViolation</a>
+</h1>
+<ul>
+<li>Type: <a href="data_ns0.html#constraintViolation">constraintViolation</a>
+</li>
+</ul>
+<h2>Example XML</h2>
+<code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;constraintViolation&gt;
+  &lt;message&gt;
+    &lt;!--content of type 'string'--&gt;
+    ...
+  &lt;/message&gt;
+  &lt;type&gt;
+    &lt;!--content of type 'string'--&gt;
+    ...
+  &lt;/type&gt;
+  &lt;field&gt;
+    &lt;!--content of type 'string'--&gt;
+    ...
+  &lt;/field&gt;
+  &lt;value&gt;
+    &lt;!--content of type 'string'--&gt;
+    ...
+  &lt;/value&gt;
+&lt;/constraintViolation&gt;</code>
+<h2>Example JSON</h2>
+<code>{
+  "message" : "...",
+  "type" : "...",
+  "field" : "...",
+  "value" : "..."
+}</code>
+</div>
+<div class="item">
+<h1>
+<a name="element_detailedUserDto">Element detailedUserDto</a>
+</h1>
+<ul>
+<li>Type: <a href="data_ns0.html#detailedUserDto">detailedUserDto</a>
+</li>
+</ul>
+<h2>Example XML</h2>
+<code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;detailedUserDto&gt;
+  &lt;id&gt;
+    &lt;!--content of type 'long'--&gt;
+    ...
+  &lt;/id&gt;
+  &lt;fullName&gt;
+    &lt;!--content of type 'string'--&gt;
+    ...
+  &lt;/fullName&gt;
+  &lt;email&gt;
+    &lt;!--content of type 'string'--&gt;
+    ...
+  &lt;/email&gt;
+  &lt;admin&gt;
+    &lt;!--content of type 'boolean'--&gt;
+    ...
+  &lt;/admin&gt;
+  &lt;active&gt;
+    &lt;!--content of type 'boolean'--&gt;
+    ...
+  &lt;/active&gt;
+  &lt;typeId&gt;
+    &lt;!--content of type 'long'--&gt;
+    ...
+  &lt;/typeId&gt;
+  &lt;requests&gt;
+    &lt;!--content of type 'requestDto'--&gt;
+    &lt;id&gt;
+      &lt;!--content of type 'long'--&gt;
+      ...
+    &lt;/id&gt;
+    &lt;from&gt;
+      &lt;!--content of type 'dateTime'--&gt;
+      ...
+    &lt;/from&gt;
+    &lt;to&gt;
+      &lt;!--content of type 'dateTime'--&gt;
+      ...
+    &lt;/to&gt;
+    &lt;askComment&gt;
+      &lt;!--content of type 'string'--&gt;
+      ...
+    &lt;/askComment&gt;
+    &lt;answerComment&gt;
+      &lt;!--content of type 'string'--&gt;
+      ...
+    &lt;/answerComment&gt;
+    &lt;typeId&gt;
+      &lt;!--content of type 'long'--&gt;
+      ...
+    &lt;/typeId&gt;
+    &lt;status&gt;
+      &lt;!--content of type 'requestStatusDto'--&gt;
+      ...
+    &lt;/status&gt;
+  &lt;/requests&gt;
+  &lt;requests&gt;
+    &lt;!--(another 'requestDto' type)--&gt;
+  &lt;/requests&gt;
+  &lt;!--...more "requests" elements...--&gt;
+&lt;/detailedUserDto&gt;</code>
+<h2>Example JSON</h2>
+<code>{
+  "id" : ...,
+  "fullName" : "...",
+  "email" : "...",
+  "admin" : false,
+  "active" : false,
+  "typeId" : ...,
+  "requests" : [ {
+    "id" : ...,
+    "from" : "...",
+    "to" : "...",
+    "askComment" : "...",
+    "answerComment" : "...",
+    "typeId" : ...,
+    "status" : {
+    }
+  }, ... ]
+}</code>
+</div>
+<div class="item">
+<h1>
+<a name="element_requestDto">Element requestDto</a>
+</h1>
+<ul>
+<li>Type: <a href="data_ns0.html#requestDto">requestDto</a>
+</li>
+</ul>
+<h2>Example XML</h2>
+<code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;requestDto&gt;
+  &lt;id&gt;
+    &lt;!--content of type 'long'--&gt;
+    ...
+  &lt;/id&gt;
+  &lt;from&gt;
+    &lt;!--content of type 'dateTime'--&gt;
+    ...
+  &lt;/from&gt;
+  &lt;to&gt;
+    &lt;!--content of type 'dateTime'--&gt;
+    ...
+  &lt;/to&gt;
+  &lt;askComment&gt;
+    &lt;!--content of type 'string'--&gt;
+    ...
+  &lt;/askComment&gt;
+  &lt;answerComment&gt;
+    &lt;!--content of type 'string'--&gt;
+    ...
+  &lt;/answerComment&gt;
+  &lt;typeId&gt;
+    &lt;!--content of type 'long'--&gt;
+    ...
+  &lt;/typeId&gt;
+  &lt;status&gt;
+    &lt;!--content of type 'requestStatusDto'--&gt;
+    ...
+  &lt;/status&gt;
+&lt;/requestDto&gt;</code>
+<h2>Example JSON</h2>
+<code>{
+  "id" : ...,
+  "from" : "...",
+  "to" : "...",
+  "askComment" : "...",
+  "answerComment" : "...",
+  "typeId" : ...,
+  "status" : {
+  }
+}</code>
+</div>
+<div class="item">
+<h1>
+<a name="element_requestStatusDto">Element requestStatusDto</a>
+</h1>
+<ul>
+<li>Type: <a href="data_ns0.html#requestStatusDto">requestStatusDto</a>
+</li>
+</ul>
+<h2>Example XML</h2>
+<code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;requestStatusDto&gt;...&lt;/requestStatusDto&gt;</code>
+<h2>Example JSON</h2>
+<code>{
+}</code>
+</div>
+<div class="item">
+<h1>
+<a name="element_requestTypeDto">Element requestTypeDto</a>
+</h1>
+<ul>
+<li>Type: <a href="data_ns0.html#requestTypeDto">requestTypeDto</a>
+</li>
+</ul>
+<h2>Example XML</h2>
+<code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;requestTypeDto&gt;
+  &lt;id&gt;
+    &lt;!--content of type 'long'--&gt;
+    ...
+  &lt;/id&gt;
+  &lt;description&gt;
+    &lt;!--content of type 'string'--&gt;
+    ...
+  &lt;/description&gt;
+&lt;/requestTypeDto&gt;</code>
+<h2>Example JSON</h2>
+<code>{
+  "id" : ...,
+  "description" : "..."
+}</code>
+</div>
+<div class="item">
+<h1>
+<a name="element_userDto">Element userDto</a>
+</h1>
+<ul>
+<li>Type: <a href="data_ns0.html#userDto">userDto</a>
+</li>
+</ul>
+<h2>Example XML</h2>
+<code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;userDto&gt;
+  &lt;id&gt;
+    &lt;!--content of type 'long'--&gt;
+    ...
+  &lt;/id&gt;
+  &lt;fullName&gt;
+    &lt;!--content of type 'string'--&gt;
+    ...
+  &lt;/fullName&gt;
+  &lt;email&gt;
+    &lt;!--content of type 'string'--&gt;
+    ...
+  &lt;/email&gt;
+  &lt;admin&gt;
+    &lt;!--content of type 'boolean'--&gt;
+    ...
+  &lt;/admin&gt;
+  &lt;active&gt;
+    &lt;!--content of type 'boolean'--&gt;
+    ...
+  &lt;/active&gt;
+  &lt;typeId&gt;
+    &lt;!--content of type 'long'--&gt;
+    ...
+  &lt;/typeId&gt;
+&lt;/userDto&gt;</code>
+<h2>Example JSON</h2>
+<code>{
+  "id" : ...,
+  "fullName" : "...",
+  "email" : "...",
+  "admin" : false,
+  "active" : false,
+  "typeId" : ...
+}</code>
+</div>
+<div class="item">
+<h1>
+<a name="element_userTypeDto">Element userTypeDto</a>
+</h1>
+<ul>
+<li>Type: <a href="data_ns0.html#userTypeDto">userTypeDto</a>
+</li>
+</ul>
+<h2>Example XML</h2>
+<code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;userTypeDto&gt;
+  &lt;id&gt;
+    &lt;!--content of type 'long'--&gt;
+    ...
+  &lt;/id&gt;
+  &lt;description&gt;
+    &lt;!--content of type 'string'--&gt;
+    ...
+  &lt;/description&gt;
+&lt;/userTypeDto&gt;</code>
+<h2>Example JSON</h2>
+<code>{
+  "id" : ...,
+  "description" : "..."
+}</code>
+</div>
+<div class="item">
+<h1>
+<a name="constraintViolation">Type constraintViolation</a>
+</h1>
+<h2>Child Elements</h2>
+<table>
+<tr>
+<th>name (type)</th>
+<th>min/max <br/>occurs</th>
+<th>description</th>
+</tr>
+<tr>
+<td>message (string)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+<tr>
+<td>type (string)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+<tr>
+<td>field (string)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+<tr>
+<td>value (string)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+</table>
+</div>
+<div class="item">
+<h1>
+<a name="detailedUserDto">Type detailedUserDto</a>
+</h1>
+<h2>Child Elements</h2>
+<table>
+<tr>
+<th>name (type)</th>
+<th>min/max <br/>occurs</th>
+<th>description</th>
+</tr>
+<tr>
+<td>id (long)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+<tr>
+<td>fullName (string)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+<tr>
+<td>email (string)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+<tr>
+<td>admin (boolean)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+<tr>
+<td>active (boolean)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+<tr>
+<td>typeId (long)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+<tr>
+<td>requests (<a href="data_ns0.html#requestDto">requestDto</a>)</td>
+<td>0/unbounded</td>
+<td>(no documentation provided)</td>
+</tr>
+</table>
+</div>
+<div class="item">
+<h1>
+<a name="requestDto">Type requestDto</a>
+</h1>
+<h2>Child Elements</h2>
+<table>
+<tr>
+<th>name (type)</th>
+<th>min/max <br/>occurs</th>
+<th>description</th>
+</tr>
+<tr>
+<td>id (long)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+<tr>
+<td>from (dateTime)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+<tr>
+<td>to (dateTime)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+<tr>
+<td>askComment (string)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+<tr>
+<td>answerComment (string)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+<tr>
+<td>typeId (long)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+<tr>
+<td>status (<a href="data_ns0.html#requestStatusDto">requestStatusDto</a>)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+</table>
+</div>
+<div class="item">
+<h1>
+<a name="requestStatusDto">Type requestStatusDto</a>
+</h1>
+<h2>Possible Values</h2>
+<table>
+<tr>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>ACCEPTED</td>
+<td/>
+</tr>
+<tr>
+<td>PENDING</td>
+<td/>
+</tr>
+<tr>
+<td>REFUSED</td>
+<td/>
+</tr>
+</table>
+</div>
+<div class="item">
+<h1>
+<a name="requestTypeDto">Type requestTypeDto</a>
+</h1>
+<h2>Child Elements</h2>
+<table>
+<tr>
+<th>name (type)</th>
+<th>min/max <br/>occurs</th>
+<th>description</th>
+</tr>
+<tr>
+<td>id (long)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+<tr>
+<td>description (string)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+</table>
+</div>
+<div class="item">
+<h1>
+<a name="userDto">Type userDto</a>
+</h1>
+<h2>Child Elements</h2>
+<table>
+<tr>
+<th>name (type)</th>
+<th>min/max <br/>occurs</th>
+<th>description</th>
+</tr>
+<tr>
+<td>id (long)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+<tr>
+<td>fullName (string)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+<tr>
+<td>email (string)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+<tr>
+<td>admin (boolean)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+<tr>
+<td>active (boolean)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+<tr>
+<td>typeId (long)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+</table>
+</div>
+<div class="item">
+<h1>
+<a name="userTypeDto">Type userTypeDto</a>
+</h1>
+<h2>Child Elements</h2>
+<table>
+<tr>
+<th>name (type)</th>
+<th>min/max <br/>occurs</th>
+<th>description</th>
+</tr>
+<tr>
+<td>id (long)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+<tr>
+<td>description (string)</td>
+<td>0/1</td>
+<td>(no documentation provided)</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sidenav">
+<h1>Home</h1>
+<ul>
+<li>
+<a href="index.html">Introduction</a>
+</li>
+<li>
+<a href="downloads.html">downloads</a>
+</li>
+</ul>
+<h1>REST Endpoints</h1>
+<ul>
+<li>
+<a href="rest.detailed-users.html">/detailed-users</a>
+</li>
+<li>
+<a href="rest.request-types.html">/request-types</a>
+</li>
+<li>
+<a href="rest.request-types.id.html">/request-types/{id}</a>
+</li>
+<li>
+<a href="rest.users.html">/users</a>
+</li>
+<li>
+<a href="rest.users.email.html">/users/{email}</a>
+</li>
+<li>
+<a href="rest.users.id.html">/users/{id}</a>
+</li>
+<li>
+<a href="rest.users.id.password.html">/users/{id}/password</a>
+</li>
+<li>
+<a href="rest.users.userId.requests.html">/users/{userId}/requests</a>
+</li>
+<li>
+<a href="rest.users.userId.requests.id.html">/users/{userId}/requests/{id}</a>
+</li>
+<li>
+<a href="rest.user-types.html">/user-types</a>
+</li>
+<li>
+<a href="rest.user-types.id.html">/user-types/{id}</a>
+</li>
+</ul>
+<h1>XML Data Elements</h1>
+<ul>
+<li>
+<a href="data_ns0.html#element_constraintViolation">constraintViolation</a>
+</li>
+<li>
+<a href="data_ns0.html#element_detailedUserDto">detailedUserDto</a>
+</li>
+<li>
+<a href="data_ns0.html#element_requestDto">requestDto</a>
+</li>
+<li>
+<a href="data_ns0.html#element_requestStatusDto">requestStatusDto</a>
+</li>
+<li>
+<a href="data_ns0.html#element_requestTypeDto">requestTypeDto</a>
+</li>
+<li>
+<a href="data_ns0.html#element_userDto">userDto</a>
+</li>
+<li>
+<a href="data_ns0.html#element_userTypeDto">userTypeDto</a>
+</li>
+</ul>
+<h1>XML Data Types</h1>
+<ul>
+<li>
+<a href="data_ns0.html#constraintViolation">constraintViolation</a>
+</li>
+<li>
+<a href="data_ns0.html#detailedUserDto">detailedUserDto</a>
+</li>
+<li>
+<a href="data_ns0.html#requestDto">requestDto</a>
+</li>
+<li>
+<a href="data_ns0.html#requestStatusDto">requestStatusDto</a>
+</li>
+<li>
+<a href="data_ns0.html#requestTypeDto">requestTypeDto</a>
+</li>
+<li>
+<a href="data_ns0.html#userDto">userDto</a>
+</li>
+<li>
+<a href="data_ns0.html#userTypeDto">userTypeDto</a>
+</li>
+</ul>
+</div>
+<div class="clearer">
+<span/>
+</div>
+</div>
+<div class="footer" align="center">
+      Generated by <a href="http://enunciate.codehaus.org">Enunciate</a>. Template design by <a href="http://templates.arcsin.se">Arcsin</a>.
+    </div>
+</div>
+</body>
+</html>

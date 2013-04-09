@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-bo/src/main/resources/sql/postgresql
+END
+data-01.sql
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-bo/src/main/resources/sql/postgresql/data-01.sql
+END
+tables.sql
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-bo/src/main/resources/sql/postgresql/tables.sql
+END

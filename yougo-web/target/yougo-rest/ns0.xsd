@@ -1,0 +1,68 @@
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="constraintViolation" type="constraintViolation"/>
+  <xs:element name="detailedUserDto" type="detailedUserDto"/>
+  <xs:element name="requestDto" type="requestDto"/>
+  <xs:element name="requestStatusDto" type="requestStatusDto"/>
+  <xs:element name="requestTypeDto" type="requestTypeDto"/>
+  <xs:element name="userDto" type="userDto"/>
+  <xs:element name="userTypeDto" type="userTypeDto"/>
+  <xs:complexType name="constraintViolation">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+      <xs:element name="type" type="xs:string" minOccurs="0"/>
+      <xs:element name="field" type="xs:string" minOccurs="0"/>
+      <xs:element name="value" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="detailedUserDto">
+    <xs:sequence>
+      <xs:element name="id" type="xs:long" minOccurs="0"/>
+      <xs:element name="fullName" type="xs:string" minOccurs="0"/>
+      <xs:element name="email" type="xs:string" minOccurs="0"/>
+      <xs:element name="admin" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="active" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="typeId" type="xs:long" minOccurs="0"/>
+      <xs:element name="requests" type="requestDto" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="requestDto">
+    <xs:sequence>
+      <xs:element name="id" type="xs:long" minOccurs="0"/>
+      <xs:element name="from" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="to" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="askComment" type="xs:string" minOccurs="0"/>
+      <xs:element name="answerComment" type="xs:string" minOccurs="0"/>
+      <xs:element name="typeId" type="xs:long" minOccurs="0"/>
+      <xs:element name="status" type="requestStatusDto" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="requestStatusDto">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ACCEPTED"/>
+      <xs:enumeration value="PENDING"/>
+      <xs:enumeration value="REFUSED"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="requestTypeDto">
+    <xs:sequence>
+      <xs:element name="id" type="xs:long" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="userDto">
+    <xs:sequence>
+      <xs:element name="id" type="xs:long" minOccurs="0"/>
+      <xs:element name="fullName" type="xs:string" minOccurs="0"/>
+      <xs:element name="email" type="xs:string" minOccurs="0"/>
+      <xs:element name="admin" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="active" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="typeId" type="xs:long" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="userTypeDto">
+    <xs:sequence>
+      <xs:element name="id" type="xs:long" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

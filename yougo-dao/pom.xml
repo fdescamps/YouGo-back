@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>YouGo-back</artifactId>
+		<groupId>com.ineatconseil</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.ineatconseil</groupId>
+	<artifactId>yougo-dao</artifactId>
+	<name>YouGO - Repository (DAOs)</name>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.ineatconseil</groupId>
+			<artifactId>yougo-bo</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+
+		<!-- 
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-annotations</artifactId>
+			<version>${org.hibernate.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.hibernate</groupId>
+					<artifactId>ejb3-persistence</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+ 		 -->
+ 		 
+		<!-- Use Javassist as Hibernate's bytecode provider -->
+		<!-- 
+		<dependency>
+			<groupId>javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.8.0.GA</version>
+		</dependency>
+		 -->
+	</dependencies>
+</project>

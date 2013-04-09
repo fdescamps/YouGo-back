@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-dao/src/main/java/com/ineatconseil/yougo/dao/hibernate
+END
+RequestTypeDaoHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-dao/src/main/java/com/ineatconseil/yougo/dao/hibernate/RequestTypeDaoHibernate.java
+END
+GenericDaoHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-dao/src/main/java/com/ineatconseil/yougo/dao/hibernate/GenericDaoHibernate.java
+END
+UserDaoHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-dao/src/main/java/com/ineatconseil/yougo/dao/hibernate/UserDaoHibernate.java
+END
+UserTypeDaoHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-dao/src/main/java/com/ineatconseil/yougo/dao/hibernate/UserTypeDaoHibernate.java
+END
+RequestDaoHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-dao/src/main/java/com/ineatconseil/yougo/dao/hibernate/RequestDaoHibernate.java
+END

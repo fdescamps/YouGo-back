@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-dao/src/main/java/com/ineatconseil/yougo/dao
+END
+GenericDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-dao/src/main/java/com/ineatconseil/yougo/dao/GenericDao.java
+END
+UserDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-dao/src/main/java/com/ineatconseil/yougo/dao/UserDao.java
+END
+UserTypeDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-dao/src/main/java/com/ineatconseil/yougo/dao/UserTypeDao.java
+END
+RequestDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-dao/src/main/java/com/ineatconseil/yougo/dao/RequestDao.java
+END
+RequestTypeDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-dao/src/main/java/com/ineatconseil/yougo/dao/RequestTypeDao.java
+END

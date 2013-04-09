@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-bo/src/main/java/com/ineatconseil/yougo/bo
+END
+UserType.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-bo/src/main/java/com/ineatconseil/yougo/bo/UserType.java
+END
+BaseEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-bo/src/main/java/com/ineatconseil/yougo/bo/BaseEntity.java
+END
+Request.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-bo/src/main/java/com/ineatconseil/yougo/bo/Request.java
+END
+RequestType.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-bo/src/main/java/com/ineatconseil/yougo/bo/RequestType.java
+END
+RequestStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-bo/src/main/java/com/ineatconseil/yougo/bo/RequestStatus.java
+END
+User.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-bo/src/main/java/com/ineatconseil/yougo/bo/User.java
+END

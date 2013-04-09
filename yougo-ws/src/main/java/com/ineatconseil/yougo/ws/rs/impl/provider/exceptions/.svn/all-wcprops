@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-ws/src/main/java/com/ineatconseil/yougo/ws/rs/impl/provider/exceptions
+END
+ConstraintViolationException.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-ws/src/main/java/com/ineatconseil/yougo/ws/rs/impl/provider/exceptions/ConstraintViolationException.java
+END
+EntityNotFoundException.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-ws/src/main/java/com/ineatconseil/yougo/ws/rs/impl/provider/exceptions/EntityNotFoundException.java
+END
+DataAccessException.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-ws/src/main/java/com/ineatconseil/yougo/ws/rs/impl/provider/exceptions/DataAccessException.java
+END

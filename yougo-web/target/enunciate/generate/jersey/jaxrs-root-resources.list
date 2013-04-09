@@ -1,0 +1,5 @@
+com.ineatconseil.yougo.ws.rs.impl.RequestRestServiceImpl
+com.ineatconseil.yougo.ws.rs.impl.UserTypeRestServiceImpl
+com.ineatconseil.yougo.ws.rs.impl.RequestTypeRestServiceImpl
+com.ineatconseil.yougo.ws.rs.impl.UserRestServiceImpl
+com.ineatconseil.yougo.ws.rs.impl.DetailedUserRestServiceImpl

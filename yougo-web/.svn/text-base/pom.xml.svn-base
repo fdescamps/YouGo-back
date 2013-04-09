@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<artifactId>yougo</artifactId>
+		<groupId>com.ineatconseil</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.ineatconseil</groupId>
+	<artifactId>yougo-web</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>YouGO - Main Webapp</name>
+
+	<build>
+		<finalName>yougo-rest</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.enunciate</groupId>
+				<artifactId>maven-enunciate-plugin</artifactId>
+				<version>1.23</version>
+				<configuration>
+					<configFile>src/enunciate/enunciate.xml</configFile>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>assemble</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.ineatconseil</groupId>
+			<artifactId>yougo-ws</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+
+		<!-- Dépendance obligatoire pour le mode autoproxy de Spring -->
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib</artifactId>
+			<version>2.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.codehaus.enunciate</groupId>
+			<artifactId>enunciate-rt</artifactId>
+			<version>1.23</version>
+			<exclusions>
+				<exclusion>
+	               <groupId>org.codehaus.enunciate</groupId>
+	               <artifactId>enunciate-c</artifactId>
+	            </exclusion>
+	            <exclusion>
+	               <groupId>org.codehaus.enunciate</groupId>
+	               <artifactId>enunciate-csharp</artifactId>
+	            </exclusion>
+	            <exclusion>
+	               <groupId>org.codehaus.enunciate</groupId>
+	               <artifactId>enunciate-obj-c</artifactId>
+	            </exclusion>
+            </exclusions>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.jws</groupId>
+			<artifactId>jsr181-api</artifactId>
+			<version>1.0-MR1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<!--depending modules: core-rt -->
+			<groupId>javax.xml.ws</groupId>
+			<artifactId>jaxws-api</artifactId>
+			<version>2.1-1</version>
+			<scope>compile</scope>
+			<exclusions>
+				<exclusion>
+					<!-- we're going to explicitly depend on jaxb elsewhere. -->
+					<groupId>javax.xml.bind</groupId>
+					<artifactId>jaxb-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<!-- We'll depend on SAAJ as needed (this really should be optional). -->
+					<groupId>javax.xml.soap</groupId>
+					<artifactId>saaj-api</artifactId>
+				</exclusion>
+				<!-- Excluding here because this artifact doesn't exist in the central 
+					repo -->
+				<exclusion>
+					<groupId>javax.jws</groupId>
+					<artifactId>jsr181</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.ws.rs</groupId>
+			<artifactId>jsr311-api</artifactId>
+			<version>1.0</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.mortbay.jetty</groupId>
+			<artifactId>jetty-embedded</artifactId>
+			<version>6.1.26</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>${com.sun.jersey.version}</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- CloudFoundry -->
+		<dependency>
+			<groupId>org.cloudfoundry</groupId>
+			<artifactId>cloudfoundry-runtime</artifactId>
+			<version>${org.cloudfoundry-version}</version>
+		</dependency>
+
+	</dependencies>
+</project>

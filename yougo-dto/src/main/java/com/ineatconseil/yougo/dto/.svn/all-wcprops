@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-dto/src/main/java/com/ineatconseil/yougo/dto
+END
+RequestDto.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-dto/src/main/java/com/ineatconseil/yougo/dto/RequestDto.java
+END
+DetailedUserDto.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-dto/src/main/java/com/ineatconseil/yougo/dto/DetailedUserDto.java
+END
+RequestTypeDto.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-dto/src/main/java/com/ineatconseil/yougo/dto/RequestTypeDto.java
+END
+RequestStatusDto.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-dto/src/main/java/com/ineatconseil/yougo/dto/RequestStatusDto.java
+END
+UserDto.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-dto/src/main/java/com/ineatconseil/yougo/dto/UserDto.java
+END
+UserTypeDto.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-dto/src/main/java/com/ineatconseil/yougo/dto/UserTypeDto.java
+END
+ConstraintViolation.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-dto/src/main/java/com/ineatconseil/yougo/dto/ConstraintViolation.java
+END

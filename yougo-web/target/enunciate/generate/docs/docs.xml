@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api-docs title="YouGO - Main Webapp">
+  <data>
+    <schema namespace="" namespaceId="ns0" file="ns0.xsd">
+      <types>
+        <type name="constraintViolation" id="com.ineatconseil.yougo.dto.ConstraintViolation" package="com.ineatconseil.yougo.dto" groups="ConstraintViolation">
+          <elements>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="message" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="string"/>
+            </element>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="type" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="string"/>
+            </element>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="field" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="string"/>
+            </element>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="value" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="string"/>
+            </element>
+          </elements>
+        </type>
+        <type name="detailedUserDto" id="com.ineatconseil.yougo.dto.DetailedUserDto" package="com.ineatconseil.yougo.dto" groups="DetailedUserDto">
+          <elements>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="id" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="long"/>
+            </element>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="fullName" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="string"/>
+            </element>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="email" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="string"/>
+            </element>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="admin" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="boolean"/>
+            </element>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="active" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="boolean"/>
+            </element>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="typeId" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="long"/>
+            </element>
+            <element minOccurs="0" maxOccurs="unbounded">
+              <choice name="requests" namespace="" typeNamespace="" typeName="requestDto" typeSchemaId="ns0"/>
+            </element>
+          </elements>
+        </type>
+        <type name="requestDto" id="com.ineatconseil.yougo.dto.RequestDto" package="com.ineatconseil.yougo.dto" groups="RequestDto">
+          <elements>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="id" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="long"/>
+            </element>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="from" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="dateTime"/>
+            </element>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="to" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="dateTime"/>
+            </element>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="askComment" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="string"/>
+            </element>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="answerComment" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="string"/>
+            </element>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="typeId" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="long"/>
+            </element>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="status" namespace="" typeNamespace="" typeName="requestStatusDto" typeSchemaId="ns0"/>
+            </element>
+          </elements>
+        </type>
+        <type name="requestStatusDto" id="com.ineatconseil.yougo.dto.RequestStatusDto" package="com.ineatconseil.yougo.dto" groups="RequestStatusDto">
+          <values>
+            <item value="ACCEPTED">
+            </item>
+            <item value="PENDING">
+            </item>
+            <item value="REFUSED">
+            </item>
+          </values>
+        </type>
+        <type name="requestTypeDto" id="com.ineatconseil.yougo.dto.RequestTypeDto" package="com.ineatconseil.yougo.dto" groups="RequestTypeDto">
+          <elements>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="id" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="long"/>
+            </element>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="description" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="string"/>
+            </element>
+          </elements>
+        </type>
+        <type name="userDto" id="com.ineatconseil.yougo.dto.UserDto" package="com.ineatconseil.yougo.dto" groups="UserDto">
+          <elements>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="id" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="long"/>
+            </element>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="fullName" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="string"/>
+            </element>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="email" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="string"/>
+            </element>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="admin" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="boolean"/>
+            </element>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="active" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="boolean"/>
+            </element>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="typeId" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="long"/>
+            </element>
+          </elements>
+        </type>
+        <type name="userTypeDto" id="com.ineatconseil.yougo.dto.UserTypeDto" package="com.ineatconseil.yougo.dto" groups="UserTypeDto">
+          <elements>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="id" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="long"/>
+            </element>
+            <element minOccurs="0" maxOccurs="1">
+              <choice name="description" namespace="" typeNamespace="http://www.w3.org/2001/XMLSchema" typeName="string"/>
+            </element>
+          </elements>
+        </type>
+      </types>
+      <elements>
+        <element name="constraintViolation" type="com.ineatconseil.yougo.dto.ConstraintViolation" typeName="constraintViolation" typeNamespace="" typeSchemaId="ns0" groups="ConstraintViolation">
+          <examplexml><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<constraintViolation>
+  <message>
+    <!--content of type 'string'-->
+    ...
+  </message>
+  <type>
+    <!--content of type 'string'-->
+    ...
+  </type>
+  <field>
+    <!--content of type 'string'-->
+    ...
+  </field>
+  <value>
+    <!--content of type 'string'-->
+    ...
+  </value>
+</constraintViolation>]]></examplexml>
+          <examplejson><![CDATA[{
+  "message" : "...",
+  "type" : "...",
+  "field" : "...",
+  "value" : "..."
+}]]></examplejson>
+        </element>
+        <element name="detailedUserDto" type="com.ineatconseil.yougo.dto.DetailedUserDto" typeName="detailedUserDto" typeNamespace="" typeSchemaId="ns0" groups="DetailedUserDto">
+          <examplexml><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<detailedUserDto>
+  <id>
+    <!--content of type 'long'-->
+    ...
+  </id>
+  <fullName>
+    <!--content of type 'string'-->
+    ...
+  </fullName>
+  <email>
+    <!--content of type 'string'-->
+    ...
+  </email>
+  <admin>
+    <!--content of type 'boolean'-->
+    ...
+  </admin>
+  <active>
+    <!--content of type 'boolean'-->
+    ...
+  </active>
+  <typeId>
+    <!--content of type 'long'-->
+    ...
+  </typeId>
+  <requests>
+    <!--content of type 'requestDto'-->
+    <id>
+      <!--content of type 'long'-->
+      ...
+    </id>
+    <from>
+      <!--content of type 'dateTime'-->
+      ...
+    </from>
+    <to>
+      <!--content of type 'dateTime'-->
+      ...
+    </to>
+    <askComment>
+      <!--content of type 'string'-->
+      ...
+    </askComment>
+    <answerComment>
+      <!--content of type 'string'-->
+      ...
+    </answerComment>
+    <typeId>
+      <!--content of type 'long'-->
+      ...
+    </typeId>
+    <status>
+      <!--content of type 'requestStatusDto'-->
+      ...
+    </status>
+  </requests>
+  <requests>
+    <!--(another 'requestDto' type)-->
+  </requests>
+  <!--...more "requests" elements...-->
+</detailedUserDto>]]></examplexml>
+          <examplejson><![CDATA[{
+  "id" : ...,
+  "fullName" : "...",
+  "email" : "...",
+  "admin" : false,
+  "active" : false,
+  "typeId" : ...,
+  "requests" : [ {
+    "id" : ...,
+    "from" : "...",
+    "to" : "...",
+    "askComment" : "...",
+    "answerComment" : "...",
+    "typeId" : ...,
+    "status" : {
+    }
+  }, ... ]
+}]]></examplejson>
+        </element>
+        <element name="requestDto" type="com.ineatconseil.yougo.dto.RequestDto" typeName="requestDto" typeNamespace="" typeSchemaId="ns0" groups="RequestDto">
+          <examplexml><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<requestDto>
+  <id>
+    <!--content of type 'long'-->
+    ...
+  </id>
+  <from>
+    <!--content of type 'dateTime'-->
+    ...
+  </from>
+  <to>
+    <!--content of type 'dateTime'-->
+    ...
+  </to>
+  <askComment>
+    <!--content of type 'string'-->
+    ...
+  </askComment>
+  <answerComment>
+    <!--content of type 'string'-->
+    ...
+  </answerComment>
+  <typeId>
+    <!--content of type 'long'-->
+    ...
+  </typeId>
+  <status>
+    <!--content of type 'requestStatusDto'-->
+    ...
+  </status>
+</requestDto>]]></examplexml>
+          <examplejson><![CDATA[{
+  "id" : ...,
+  "from" : "...",
+  "to" : "...",
+  "askComment" : "...",
+  "answerComment" : "...",
+  "typeId" : ...,
+  "status" : {
+  }
+}]]></examplejson>
+        </element>
+        <element name="requestStatusDto" type="com.ineatconseil.yougo.dto.RequestStatusDto" typeName="requestStatusDto" typeNamespace="" typeSchemaId="ns0" groups="RequestStatusDto">
+          <examplexml><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<requestStatusDto>...</requestStatusDto>]]></examplexml>
+          <examplejson><![CDATA[{
+}]]></examplejson>
+        </element>
+        <element name="requestTypeDto" type="com.ineatconseil.yougo.dto.RequestTypeDto" typeName="requestTypeDto" typeNamespace="" typeSchemaId="ns0" groups="RequestTypeDto">
+          <examplexml><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<requestTypeDto>
+  <id>
+    <!--content of type 'long'-->
+    ...
+  </id>
+  <description>
+    <!--content of type 'string'-->
+    ...
+  </description>
+</requestTypeDto>]]></examplexml>
+          <examplejson><![CDATA[{
+  "id" : ...,
+  "description" : "..."
+}]]></examplejson>
+        </element>
+        <element name="userDto" type="com.ineatconseil.yougo.dto.UserDto" typeName="userDto" typeNamespace="" typeSchemaId="ns0" groups="UserDto">
+          <examplexml><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<userDto>
+  <id>
+    <!--content of type 'long'-->
+    ...
+  </id>
+  <fullName>
+    <!--content of type 'string'-->
+    ...
+  </fullName>
+  <email>
+    <!--content of type 'string'-->
+    ...
+  </email>
+  <admin>
+    <!--content of type 'boolean'-->
+    ...
+  </admin>
+  <active>
+    <!--content of type 'boolean'-->
+    ...
+  </active>
+  <typeId>
+    <!--content of type 'long'-->
+    ...
+  </typeId>
+</userDto>]]></examplexml>
+          <examplejson><![CDATA[{
+  "id" : ...,
+  "fullName" : "...",
+  "email" : "...",
+  "admin" : false,
+  "active" : false,
+  "typeId" : ...
+}]]></examplejson>
+        </element>
+        <element name="userTypeDto" type="com.ineatconseil.yougo.dto.UserTypeDto" typeName="userTypeDto" typeNamespace="" typeSchemaId="ns0" groups="UserTypeDto">
+          <examplexml><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<userTypeDto>
+  <id>
+    <!--content of type 'long'-->
+    ...
+  </id>
+  <description>
+    <!--content of type 'string'-->
+    ...
+  </description>
+</userTypeDto>]]></examplexml>
+          <examplejson><![CDATA[{
+  "id" : ...,
+  "description" : "..."
+}]]></examplejson>
+        </element>
+      </elements>
+      <groups>
+        <group>ConstraintViolation</group>
+        <group>DetailedUserDto</group>
+        <group>RequestDto</group>
+        <group>RequestStatusDto</group>
+        <group>RequestTypeDto</group>
+        <group>UserDto</group>
+        <group>UserTypeDto</group>
+      </groups>
+    </schema>
+  </data>
+  <soap>
+    <wsdls>
+    </wsdls>
+  </soap>
+  <rest baseAddress="http://localhost:8080/YouGO" wadl="application.wadl">
+    <resources>
+      <resource name="/detailed-users" subcontext="/api" groups="DetailedUserRestServiceImpl">
+        <operation name="GET">
+          <contentType type="*/*" consumable="true" produceable="false"/>
+          <contentType type="application/xml" consumable="true" produceable="false"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/detailed-users"/>
+          <parameter name="from" type="query">
+            <![CDATA[(no documentation provided)]]>
+          </parameter>
+          <parameter name="to" type="query">
+            <![CDATA[(no documentation provided)]]>
+          </parameter>
+          <parameter name="requestStatus" type="query">
+            <![CDATA[(no documentation provided)]]>
+          </parameter>
+          <outValue>
+            
+            
+            <documentation><![CDATA[(no documentation provided)]]></documentation>
+          </outValue>
+        </operation>
+      </resource>
+      <resource name="/request-types" subcontext="/api" groups="RequestTypeRestServiceImpl">
+        <operation name="GET">
+          <documentation>
+            <![CDATA[This method returns a list which contains all the RequestTypeDto.]]>
+          </documentation>
+          <contentType type="*/*" consumable="true" produceable="false"/>
+          <contentType type="application/xml" consumable="true" produceable="false"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/request-types"/>
+          <outValue>
+            
+            
+            <documentation><![CDATA[A list of all RequestTypeDto or a Response with
+an <tt>INTERNAL_SERVER_ERROR</tt> status code in the case
+of a server error.]]></documentation>
+          </outValue>
+        </operation>
+        <operation name="POST">
+          <documentation>
+            <![CDATA[This method provides a way to create a new RequestTypeDto.
+<p>
+The id attribute of this object may be <tt>null</tt> or empty.
+If it's not the case, a Response with a <tt>BAD_REQUEST</tt>
+is returned to the client.
+</p>]]>
+          </documentation>
+          <contentType type="*/*" consumable="false" produceable="true"/>
+          <contentType type="application/xml" consumable="false" produceable="true" subcontext="/xml" path="/xml/request-types"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/request-types"/>
+          <inValue>
+            <xmlElement elementSchemaId="ns0" elementNamespace="" elementName="requestTypeDto" />
+            
+            <documentation><![CDATA[The new RequestTypeDto to save.]]></documentation>
+          </inValue>
+          <outValue>
+            
+            
+            <documentation><![CDATA[A Response with the status <tt>CREATED</tt>
+which holds the URI of the new REST resource.]]></documentation>
+          </outValue>
+        </operation>
+      </resource>
+      <resource name="/user-types" subcontext="/api" groups="UserTypeRestServiceImpl">
+        <operation name="GET">
+          <documentation>
+            <![CDATA[This method returns a list of UserTypeDto.]]>
+          </documentation>
+          <contentType type="*/*" consumable="true" produceable="false"/>
+          <contentType type="application/xml" consumable="true" produceable="false"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/user-types"/>
+          <outValue>
+            
+            
+            <documentation><![CDATA[A list of all UserTypeDto or a Response with
+an <tt>INTERNAL_SERVER_ERROR</tt> status code in the case
+of a server error.]]></documentation>
+          </outValue>
+        </operation>
+        <operation name="POST">
+          <documentation>
+            <![CDATA[This method provides a way to create a new UserTypeDto.
+<p>
+The id attribute of this object may be <tt>null</tt> or empty.
+If it's not the case, a Response with a <tt>BAD_REQUEST</tt>
+is returned to the client.
+</p>]]>
+          </documentation>
+          <contentType type="*/*" consumable="false" produceable="true"/>
+          <contentType type="application/xml" consumable="false" produceable="true" subcontext="/xml" path="/xml/user-types"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/user-types"/>
+          <inValue>
+            <xmlElement elementSchemaId="ns0" elementNamespace="" elementName="userTypeDto" />
+            
+            <documentation><![CDATA[The new UserTypeDto to save.]]></documentation>
+          </inValue>
+          <outValue>
+            
+            
+            <documentation><![CDATA[A Response with the status <tt>CREATED</tt>
+which holds the URI of the new REST resource.]]></documentation>
+          </outValue>
+        </operation>
+      </resource>
+      <resource name="/users" subcontext="/api" groups="UserRestServiceImpl">
+        <operation name="GET">
+          <contentType type="*/*" consumable="true" produceable="false"/>
+          <contentType type="application/xml" consumable="true" produceable="false"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/users"/>
+          <outValue>
+            
+            
+            <documentation><![CDATA[(no documentation provided)]]></documentation>
+          </outValue>
+        </operation>
+        <operation name="POST">
+          <contentType type="*/*" consumable="false" produceable="true"/>
+          <contentType type="application/xml" consumable="false" produceable="true" subcontext="/xml" path="/xml/users"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/users"/>
+          <inValue>
+            <xmlElement elementSchemaId="ns0" elementNamespace="" elementName="userDto" />
+            
+            <documentation><![CDATA[(no documentation provided)]]></documentation>
+          </inValue>
+          <outValue>
+            
+            
+            <documentation><![CDATA[(no documentation provided)]]></documentation>
+          </outValue>
+        </operation>
+      </resource>
+      <resource name="/request-types/{id}" subcontext="/api" groups="RequestTypeRestServiceImpl">
+        <operation name="GET">
+          <documentation>
+            <![CDATA[This method searches for a RequestTypeDto by
+its identifier.]]>
+          </documentation>
+          <contentType type="*/*" consumable="true" produceable="false"/>
+          <contentType type="application/xml" consumable="true" produceable="false"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/request-types/{id}"/>
+          <parameter name="id" type="path">
+            <![CDATA[The identifier of a RequestTypeDto]]>
+          </parameter>
+          <outValue>
+            
+            
+            <documentation><![CDATA[A RequestTypeDto if exists, else returns a Response provided by
+<ul>
+<li>
+The EntityNotFoundException mapper, which returns a <tt>NOT_FOUND</tt> status code
+if no RequestTypeDto matches the given identifier.
+</li>
+<li>
+The DataAccessException mapper, which returns a <tt>INTERNAL_SERVER_ERROR</tt> status code
+in the case of a server error.
+</li>
+</ul>]]></documentation>
+          </outValue>
+        </operation>
+        <operation name="PUT">
+          <documentation>
+            <![CDATA[This method provides a way to update a RequestTypeDto.
+<p>
+Both identifiers in method parameters and object's attributes may be
+specified to update the given object. If it's not the case, a
+Response with a <tt>BAD_REQUEST</tt> is returned to
+the client.
+</p>]]>
+          </documentation>
+          <contentType type="*/*" consumable="false" produceable="true"/>
+          <contentType type="application/xml" consumable="false" produceable="true" subcontext="/xml" path="/xml/request-types/{id}"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/request-types/{id}"/>
+          <parameter name="id" type="path">
+            <![CDATA[The UserTypeDto identifier.]]>
+          </parameter>
+          <inValue>
+            <xmlElement elementSchemaId="ns0" elementNamespace="" elementName="requestTypeDto" />
+            
+            <documentation><![CDATA[The RequestTypeDto to update.]]></documentation>
+          </inValue>
+          <outValue>
+            
+            
+            <documentation><![CDATA[A Response with the status <tt>OK</tt>.]]></documentation>
+          </outValue>
+        </operation>
+        <operation name="DELETE">
+          <documentation>
+            <![CDATA[This method provides a way to delete a RequestTypeDto
+by its identifier.]]>
+          </documentation>
+          <contentType type="*/*" consumable="true" produceable="true"/>
+          <contentType type="application/xml" consumable="true" produceable="true" subcontext="/xml" path="/xml/request-types/{id}"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/request-types/{id}"/>
+          <parameter name="id" type="path">
+            <![CDATA[The identifier of a RequestTypeDto.]]>
+          </parameter>
+          <outValue>
+            
+            
+            <documentation><![CDATA[A Response with the status <tt>OK</tt>]]></documentation>
+          </outValue>
+        </operation>
+      </resource>
+      <resource name="/user-types/{id}" subcontext="/api" groups="UserTypeRestServiceImpl">
+        <operation name="GET">
+          <documentation>
+            <![CDATA[This method searches for an UserTypeDto by
+its identifier.]]>
+          </documentation>
+          <contentType type="*/*" consumable="true" produceable="false"/>
+          <contentType type="application/xml" consumable="true" produceable="false"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/user-types/{id}"/>
+          <parameter name="id" type="path">
+            <![CDATA[The identifier of an UserTypeDto]]>
+          </parameter>
+          <outValue>
+            
+            
+            <documentation><![CDATA[An UserTypeDto if exists, else returns a Response provided by
+<ul>
+<li>
+The EntityNotFoundException mapper, which returns a <tt>NOT_FOUND</tt> status code
+if no UserTypeDto matches the given identifier.
+</li>
+<li>
+The DataAccessException mapper, which returns a <tt>INTERNAL_SERVER_ERROR</tt> status code
+in the case of a server error.
+</li>
+</ul>]]></documentation>
+          </outValue>
+        </operation>
+        <operation name="PUT">
+          <documentation>
+            <![CDATA[This method provides a way to update an UserTypeDto.
+<p>
+Both identifiers in method parameters and object's attributes may be
+specified to update the given object. If it's not the case, a
+Response with a <tt>BAD_REQUEST</tt> is returned to
+the client.
+</p>]]>
+          </documentation>
+          <contentType type="*/*" consumable="false" produceable="true"/>
+          <contentType type="application/xml" consumable="false" produceable="true" subcontext="/xml" path="/xml/user-types/{id}"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/user-types/{id}"/>
+          <parameter name="id" type="path">
+            <![CDATA[The UserTypeDto identifier.]]>
+          </parameter>
+          <inValue>
+            <xmlElement elementSchemaId="ns0" elementNamespace="" elementName="userTypeDto" />
+            
+            <documentation><![CDATA[The UserTypeDto to update.]]></documentation>
+          </inValue>
+          <outValue>
+            
+            
+            <documentation><![CDATA[A Response with the status <tt>OK</tt>.]]></documentation>
+          </outValue>
+        </operation>
+        <operation name="DELETE">
+          <documentation>
+            <![CDATA[This method provides a way to delete an UserTypeDto
+by its identifier.]]>
+          </documentation>
+          <contentType type="*/*" consumable="true" produceable="true"/>
+          <contentType type="application/xml" consumable="true" produceable="true" subcontext="/xml" path="/xml/user-types/{id}"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/user-types/{id}"/>
+          <parameter name="id" type="path">
+            <![CDATA[The identifier of an UserTypeDto.]]>
+          </parameter>
+          <outValue>
+            
+            
+            <documentation><![CDATA[A Response with the status <tt>OK</tt>]]></documentation>
+          </outValue>
+        </operation>
+      </resource>
+      <resource name="/users/{email}" subcontext="/api" groups="UserRestServiceImpl">
+        <operation name="GET">
+          <contentType type="*/*" consumable="true" produceable="false"/>
+          <contentType type="application/xml" consumable="true" produceable="false"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/users/{email}"/>
+          <parameter name="email" type="path">
+            <![CDATA[(no documentation provided)]]>
+          </parameter>
+          <outValue>
+            
+            
+            <documentation><![CDATA[(no documentation provided)]]></documentation>
+          </outValue>
+        </operation>
+      </resource>
+      <resource name="/users/{id}" subcontext="/api" groups="UserRestServiceImpl">
+        <operation name="GET">
+          <contentType type="*/*" consumable="true" produceable="false"/>
+          <contentType type="application/xml" consumable="true" produceable="false"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/users/{id}"/>
+          <parameter name="id" type="path">
+            <![CDATA[(no documentation provided)]]>
+          </parameter>
+          <outValue>
+            
+            
+            <documentation><![CDATA[(no documentation provided)]]></documentation>
+          </outValue>
+        </operation>
+        <operation name="PUT">
+          <contentType type="*/*" consumable="false" produceable="true"/>
+          <contentType type="application/xml" consumable="false" produceable="true" subcontext="/xml" path="/xml/users/{id}"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/users/{id}"/>
+          <parameter name="id" type="path">
+            <![CDATA[(no documentation provided)]]>
+          </parameter>
+          <inValue>
+            <xmlElement elementSchemaId="ns0" elementNamespace="" elementName="userDto" />
+            
+            <documentation><![CDATA[(no documentation provided)]]></documentation>
+          </inValue>
+          <outValue>
+            
+            
+            <documentation><![CDATA[(no documentation provided)]]></documentation>
+          </outValue>
+        </operation>
+        <operation name="DELETE">
+          <contentType type="*/*" consumable="true" produceable="true"/>
+          <contentType type="application/xml" consumable="true" produceable="true" subcontext="/xml" path="/xml/users/{id}"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/users/{id}"/>
+          <parameter name="id" type="path">
+            <![CDATA[(no documentation provided)]]>
+          </parameter>
+          <outValue>
+            
+            
+            <documentation><![CDATA[(no documentation provided)]]></documentation>
+          </outValue>
+        </operation>
+      </resource>
+      <resource name="/users/{id}/password" subcontext="/api" groups="UserRestServiceImpl">
+        <operation name="PUT">
+          <contentType type="*/*" consumable="true" produceable="true"/>
+          <contentType type="application/xml" consumable="true" produceable="true" subcontext="/xml" path="/xml/users/{id}/password"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/users/{id}/password"/>
+          <parameter name="id" type="path">
+            <![CDATA[(no documentation provided)]]>
+          </parameter>
+          <parameter name="oldPassword" type="form">
+            <![CDATA[(no documentation provided)]]>
+          </parameter>
+          <parameter name="newPassword" type="form">
+            <![CDATA[(no documentation provided)]]>
+          </parameter>
+          <parameter name="confirmedNewPassword" type="form">
+            <![CDATA[(no documentation provided)]]>
+          </parameter>
+          <outValue>
+            
+            
+            <documentation><![CDATA[(no documentation provided)]]></documentation>
+          </outValue>
+        </operation>
+      </resource>
+      <resource name="/users/{userId}/requests" subcontext="/api" groups="RequestRestServiceImpl">
+        <operation name="GET">
+          <contentType type="*/*" consumable="true" produceable="false"/>
+          <contentType type="application/xml" consumable="true" produceable="false"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/users/{userId}/requests"/>
+          <parameter name="userId" type="path">
+            <![CDATA[(no documentation provided)]]>
+          </parameter>
+          <parameter name="from" type="query">
+            <![CDATA[(no documentation provided)]]>
+          </parameter>
+          <parameter name="to" type="query">
+            <![CDATA[(no documentation provided)]]>
+          </parameter>
+          <parameter name="requestStatus" type="query">
+            <![CDATA[(no documentation provided)]]>
+          </parameter>
+          <outValue>
+            
+            
+            <documentation><![CDATA[(no documentation provided)]]></documentation>
+          </outValue>
+        </operation>
+        <operation name="POST">
+          <contentType type="*/*" consumable="false" produceable="true"/>
+          <contentType type="application/xml" consumable="false" produceable="true" subcontext="/xml" path="/xml/users/{userId}/requests"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/users/{userId}/requests"/>
+          <parameter name="userId" type="path">
+            <![CDATA[(no documentation provided)]]>
+          </parameter>
+          <inValue>
+            <xmlElement elementSchemaId="ns0" elementNamespace="" elementName="requestDto" />
+            
+            <documentation><![CDATA[(no documentation provided)]]></documentation>
+          </inValue>
+          <outValue>
+            
+            
+            <documentation><![CDATA[(no documentation provided)]]></documentation>
+          </outValue>
+        </operation>
+      </resource>
+      <resource name="/users/{userId}/requests/{id}" subcontext="/api" groups="RequestRestServiceImpl">
+        <operation name="GET">
+          <contentType type="*/*" consumable="true" produceable="false"/>
+          <contentType type="application/xml" consumable="true" produceable="false"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/users/{userId}/requests/{id}"/>
+          <parameter name="userId" type="path">
+            <![CDATA[(no documentation provided)]]>
+          </parameter>
+          <parameter name="id" type="path">
+            <![CDATA[(no documentation provided)]]>
+          </parameter>
+          <outValue>
+            
+            
+            <documentation><![CDATA[(no documentation provided)]]></documentation>
+          </outValue>
+        </operation>
+        <operation name="PUT">
+          <contentType type="*/*" consumable="false" produceable="true"/>
+          <contentType type="application/xml" consumable="false" produceable="true" subcontext="/xml" path="/xml/users/{userId}/requests/{id}"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/users/{userId}/requests/{id}"/>
+          <parameter name="userId" type="path">
+            <![CDATA[(no documentation provided)]]>
+          </parameter>
+          <parameter name="id" type="path">
+            <![CDATA[(no documentation provided)]]>
+          </parameter>
+          <inValue>
+            <xmlElement elementSchemaId="ns0" elementNamespace="" elementName="requestDto" />
+            
+            <documentation><![CDATA[(no documentation provided)]]></documentation>
+          </inValue>
+          <outValue>
+            
+            
+            <documentation><![CDATA[(no documentation provided)]]></documentation>
+          </outValue>
+        </operation>
+        <operation name="DELETE">
+          <contentType type="*/*" consumable="true" produceable="true"/>
+          <contentType type="application/xml" consumable="true" produceable="true" subcontext="/xml" path="/xml/users/{userId}/requests/{id}"/>
+          <contentType type="application/json" consumable="true" produceable="true" subcontext="/json" path="/json/users/{userId}/requests/{id}"/>
+          <parameter name="id" type="path">
+            <![CDATA[(no documentation provided)]]>
+          </parameter>
+          <outValue>
+            
+            
+            <documentation><![CDATA[(no documentation provided)]]></documentation>
+          </outValue>
+        </operation>
+      </resource>
+    </resources>
+    <groups>
+      <group>DetailedUserRestServiceImpl</group>
+      <group>RequestRestServiceImpl</group>
+      <group>RequestTypeRestServiceImpl</group>
+      <group>UserRestServiceImpl</group>
+      <group>UserTypeRestServiceImpl</group>
+    </groups>
+  </rest>
+  <packages>
+    <package id="com.ineatconseil.yougo.ws.rs.impl.provider.exceptions">
+    </package>
+    <package id="com.ineatconseil.yougo.ws.rs.impl">
+    </package>
+    <package id="com.ineatconseil.yougo.ws.rs.impl.provider">
+    </package>
+    <package id="com.ineatconseil.yougo.ws.rs.impl.annotation">
+    </package>
+    <package id="com.ineatconseil.yougo.cloudfoundry">
+    </package>
+    <package id="com.ineatconseil.yougo.security">
+    </package>
+    <package id="com.ineatconseil.yougo.dto">
+    </package>
+    <package id="com.ineatconseil.yougo.ws.rs.api">
+    </package>
+  </packages>
+</api-docs>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+<link rel="stylesheet" type="text/css" href="default.css" media="screen"/>
+<title>YouGO - Main Webapp</title>
+</head>
+<body>
+<div class="container">
+<div class="main">
+<div class="header">
+<div class="title">
+<h1>YouGO - Main Webapp</h1>
+</div>
+</div>
+<div class="content">
+<div class="item">
+<h1>REST</h1>
+<p>
+                    This API supports a <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer">Representational State Transfer (REST)</a>
+                    model for accessing a set of resources through a fixed set of operations. The following resources are accessible through the RESTful model:
+                  </p>
+<ul>
+<li>
+<a href="rest.detailed-users.html">/detailed-users</a>
+</li>
+<li>
+<a href="rest.request-types.html">/request-types</a>
+</li>
+<li>
+<a href="rest.request-types.id.html">/request-types/{id}</a>
+</li>
+<li>
+<a href="rest.users.html">/users</a>
+</li>
+<li>
+<a href="rest.users.email.html">/users/{email}</a>
+</li>
+<li>
+<a href="rest.users.id.html">/users/{id}</a>
+</li>
+<li>
+<a href="rest.users.id.password.html">/users/{id}/password</a>
+</li>
+<li>
+<a href="rest.users.userId.requests.html">/users/{userId}/requests</a>
+</li>
+<li>
+<a href="rest.users.userId.requests.id.html">/users/{userId}/requests/{id}</a>
+</li>
+<li>
+<a href="rest.user-types.html">/user-types</a>
+</li>
+<li>
+<a href="rest.user-types.id.html">/user-types/{id}</a>
+</li>
+</ul>
+<p>
+                      There is also a <a href="application.wadl">WADL document</a> describing the REST API.
+                    </p>
+</div>
+<div class="item">
+<h1>Data</h1>
+<p>
+                    All endpoints act on a common set of data. The data can be represented in different data formats (i.e. MIME types), depending on the endpoint
+                    that consumes and/or produces the data. The data can described by <a href="http://www.w3.org/XML/Schema">XML Schema</a>, which definitively
+                    describes the XML representation of the data, but is also useful for describing the other formats of the data, such as
+                    <a href="http://json.org">JSON</a>.
+                  </p>
+<p>
+                    This document will describe the data using terms based on <a href="http://www.w3.org/XML/Schema">XML Schema</a>.
+                    Data can be grouped by namespace, with a schema document describing the <i>elements</i> and <i>types</i> of the namespace.
+                    Generally speaking, <i>types</i> define the structure of the data and <i>elements</i> are <i>instances</i> of a type. For example,
+                    <i>elements</i> are usually produced by (or consumed by) a REST endpoint, and the structure of each element is described by
+                    its <i>type</i>.
+                  </p>
+<h2>Data Schemas</h2>
+<table>
+<tr>
+<th>id</th>
+<th>namespace</th>
+<th>schema file</th>
+</tr>
+<tr>
+<td>ns0</td>
+<td>Default Namespace</td>
+<td>
+<a href="ns0.xsd">ns0.xsd</a>
+</td>
+</tr>
+</table>
+<h2>XML Data Elements</h2>
+<ul>
+<li>
+                            namespace <a href="data_ns0.html">ns0</a>
+<ul>
+<li>
+<a href="data_ns0.html#element_constraintViolation">constraintViolation</a>
+</li>
+<li>
+<a href="data_ns0.html#element_detailedUserDto">detailedUserDto</a>
+</li>
+<li>
+<a href="data_ns0.html#element_requestDto">requestDto</a>
+</li>
+<li>
+<a href="data_ns0.html#element_requestStatusDto">requestStatusDto</a>
+</li>
+<li>
+<a href="data_ns0.html#element_requestTypeDto">requestTypeDto</a>
+</li>
+<li>
+<a href="data_ns0.html#element_userDto">userDto</a>
+</li>
+<li>
+<a href="data_ns0.html#element_userTypeDto">userTypeDto</a>
+</li>
+</ul>
+</li>
+</ul>
+<h2>XML Data Types</h2>
+<ul>
+<li>
+                          namespace <a href="data_ns0.html">ns0</a>
+<ul>
+<li>
+<a href="data_ns0.html#constraintViolation">constraintViolation</a>
+</li>
+<li>
+<a href="data_ns0.html#detailedUserDto">detailedUserDto</a>
+</li>
+<li>
+<a href="data_ns0.html#requestDto">requestDto</a>
+</li>
+<li>
+<a href="data_ns0.html#requestStatusDto">requestStatusDto</a>
+</li>
+<li>
+<a href="data_ns0.html#requestTypeDto">requestTypeDto</a>
+</li>
+<li>
+<a href="data_ns0.html#userDto">userDto</a>
+</li>
+<li>
+<a href="data_ns0.html#userTypeDto">userTypeDto</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="sidenav">
+<h1>Home</h1>
+<ul>
+<li>
+<a href="index.html">Introduction</a>
+</li>
+<li>
+<a href="downloads.html">downloads</a>
+</li>
+</ul>
+<h1>REST Endpoints</h1>
+<ul>
+<li>
+<a href="rest.detailed-users.html">/detailed-users</a>
+</li>
+<li>
+<a href="rest.request-types.html">/request-types</a>
+</li>
+<li>
+<a href="rest.request-types.id.html">/request-types/{id}</a>
+</li>
+<li>
+<a href="rest.users.html">/users</a>
+</li>
+<li>
+<a href="rest.users.email.html">/users/{email}</a>
+</li>
+<li>
+<a href="rest.users.id.html">/users/{id}</a>
+</li>
+<li>
+<a href="rest.users.id.password.html">/users/{id}/password</a>
+</li>
+<li>
+<a href="rest.users.userId.requests.html">/users/{userId}/requests</a>
+</li>
+<li>
+<a href="rest.users.userId.requests.id.html">/users/{userId}/requests/{id}</a>
+</li>
+<li>
+<a href="rest.user-types.html">/user-types</a>
+</li>
+<li>
+<a href="rest.user-types.id.html">/user-types/{id}</a>
+</li>
+</ul>
+<h1>XML Data Elements</h1>
+<ul>
+<li>
+<a href="data_ns0.html#element_constraintViolation">constraintViolation</a>
+</li>
+<li>
+<a href="data_ns0.html#element_detailedUserDto">detailedUserDto</a>
+</li>
+<li>
+<a href="data_ns0.html#element_requestDto">requestDto</a>
+</li>
+<li>
+<a href="data_ns0.html#element_requestStatusDto">requestStatusDto</a>
+</li>
+<li>
+<a href="data_ns0.html#element_requestTypeDto">requestTypeDto</a>
+</li>
+<li>
+<a href="data_ns0.html#element_userDto">userDto</a>
+</li>
+<li>
+<a href="data_ns0.html#element_userTypeDto">userTypeDto</a>
+</li>
+</ul>
+<h1>XML Data Types</h1>
+<ul>
+<li>
+<a href="data_ns0.html#constraintViolation">constraintViolation</a>
+</li>
+<li>
+<a href="data_ns0.html#detailedUserDto">detailedUserDto</a>
+</li>
+<li>
+<a href="data_ns0.html#requestDto">requestDto</a>
+</li>
+<li>
+<a href="data_ns0.html#requestStatusDto">requestStatusDto</a>
+</li>
+<li>
+<a href="data_ns0.html#requestTypeDto">requestTypeDto</a>
+</li>
+<li>
+<a href="data_ns0.html#userDto">userDto</a>
+</li>
+<li>
+<a href="data_ns0.html#userTypeDto">userTypeDto</a>
+</li>
+</ul>
+</div>
+<div class="clearer">
+<span/>
+</div>
+</div>
+<div class="footer" align="center">
+      Generated by <a href="http://enunciate.codehaus.org">Enunciate</a>. Template design by <a href="http://templates.arcsin.se">Arcsin</a>.
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-ws/src/main/java/com/ineatconseil/yougo/ws/rs/api
+END
+UserTypeRestService.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-ws/src/main/java/com/ineatconseil/yougo/ws/rs/api/UserTypeRestService.java
+END
+RequestRestService.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-ws/src/main/java/com/ineatconseil/yougo/ws/rs/api/RequestRestService.java
+END
+RequestTypeRestService.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-ws/src/main/java/com/ineatconseil/yougo/ws/rs/api/RequestTypeRestService.java
+END
+DetailedUserRestService.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-ws/src/main/java/com/ineatconseil/yougo/ws/rs/api/DetailedUserRestService.java
+END
+UserRestService.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/11/project-yougo/back/trunk/yougo-ws/src/main/java/com/ineatconseil/yougo/ws/rs/api/UserRestService.java
+END

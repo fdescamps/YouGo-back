@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:cloud="http://schema.cloudfoundry.org/spring"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://schema.cloudfoundry.org/spring http://schema.cloudfoundry.org/spring/cloudfoundry-spring.xsd">
+
+	<context:property-placeholder location="classpath:/config/yougo.properties" />
+	
+	<!-- Hibernate SessionFactory -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="com.ineatconseil.yougo.bo" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+				<prop key="hibernate.jdbc.batch.size">${hibernate.jdbc.batch.size}</prop>
+				<prop key="hibernate.show.sql">${hibernate.show.sql}</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<jdbc:initialize-database data-source="dataSource">
+		<!-- <jdbc:script location="classpath:/sql/hsqldb/tables.sql"/> -->
+		<jdbc:script location="classpath:/sql/hsqldb/data*.sql"/>
+	</jdbc:initialize-database>
+	
+	<beans profile="default">
+		<bean id="dataSource"
+			class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+			p:driverClassName="${datasource.driver}" p:url="${datasource.url}"
+			p:username="${datasource.username}" p:password="${datasource.password}" />
+	</beans>
+
+	<beans profile="cloud">
+		<cloud:data-source id="dataSource"/>
+	</beans>
+</beans>

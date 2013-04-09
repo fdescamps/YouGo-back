@@ -1,0 +1,14 @@
+com.ineatconseil.yougo.dto.ConstraintViolation
+com.ineatconseil.yougo.dto.DetailedUserDto
+com.ineatconseil.yougo.dto.RequestDto
+com.ineatconseil.yougo.dto.RequestStatusDto
+com.ineatconseil.yougo.dto.RequestTypeDto
+com.ineatconseil.yougo.dto.UserDto
+com.ineatconseil.yougo.dto.UserTypeDto
+com.ineatconseil.yougo.dto.ConstraintViolation
+com.ineatconseil.yougo.dto.DetailedUserDto
+com.ineatconseil.yougo.dto.RequestDto
+com.ineatconseil.yougo.dto.RequestStatusDto
+com.ineatconseil.yougo.dto.RequestTypeDto
+com.ineatconseil.yougo.dto.UserDto
+com.ineatconseil.yougo.dto.UserTypeDto

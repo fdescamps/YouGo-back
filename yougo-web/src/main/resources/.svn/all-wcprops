@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/75/project-yougo/back/trunk/yougo-web/src/main/resources
+END
+applicationContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/75/project-yougo/back/trunk/yougo-web/src/main/resources/applicationContext.xml
+END
+applicationContext-security.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/41/project-yougo/back/trunk/yougo-web/src/main/resources/applicationContext-security.xml
+END
+log4j.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/75/project-yougo/back/trunk/yougo-web/src/main/resources/log4j.xml
+END

@@ -1,0 +1,4 @@
+com.ineatconseil.yougo.ws.rs.impl.provider.exceptions.DataAccessException
+com.ineatconseil.yougo.ws.rs.impl.provider.exceptions.ConstraintViolationException
+com.ineatconseil.yougo.ws.rs.impl.provider.ContextResolver
+com.ineatconseil.yougo.ws.rs.impl.provider.exceptions.EntityNotFoundException

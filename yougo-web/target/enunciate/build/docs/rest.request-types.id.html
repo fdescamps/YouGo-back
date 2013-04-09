@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+<link rel="stylesheet" type="text/css" href="default.css" media="screen"/>
+<title>YouGO - Main Webapp</title>
+</head>
+<body>
+<div class="container">
+<div class="main">
+<div class="header">
+<div class="title">
+<h1>YouGO - Main Webapp</h1>
+</div>
+</div>
+<div class="content">
+<div class="item">
+<h1>/request-types/{id}</h1>
+<ul>
+<li>Mount Point: <a href="./api/request-types/{id}">/api/request-types/{id}</a>
+</li>
+</ul>
+<p>
+                      The following operations are supported on this resource:
+                    </p>
+<ul>
+<li>
+<a href="#GET">GET</a>
+</li>
+<li>
+<a href="#PUT">PUT</a>
+</li>
+<li>
+<a href="#DELETE">DELETE</a>
+</li>
+</ul>
+</div>
+<div class="item">
+<h1>
+<a name="GET">GET</a>
+</h1>
+<p>
+            This method searches for a RequestTypeDto by
+its identifier.
+          </p>
+<h2>Parameters</h2>
+<table>
+<tr>
+<th>name</th>
+<th>description</th>
+<th>type</th>
+<th>default</th>
+</tr>
+<tr>
+<td>id</td>
+<td>
+            The identifier of a RequestTypeDto
+          </td>
+<td>path</td>
+<td/>
+</tr>
+</table>
+<h2>Output Payload</h2>
+<table>
+<tr>
+<th>element</th>
+<th>produceable content type(s)</th>
+</tr>
+<tr>
+<td>(custom)</td>
+<td>
+<ul>
+<li>application/json (alternative mount point: <a href="./json/request-types/{id}">/json</a>)</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th colspan="2">description</th>
+</tr>
+<tr>
+<td colspan="2">A RequestTypeDto if exists, else returns a Response provided by
+<ul>
+<li>
+The EntityNotFoundException mapper, which returns a <tt>NOT_FOUND</tt> status code
+if no RequestTypeDto matches the given identifier.
+</li>
+<li>
+The DataAccessException mapper, which returns a <tt>INTERNAL_SERVER_ERROR</tt> status code
+in the case of a server error.
+</li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="item">
+<h1>
+<a name="PUT">PUT</a>
+</h1>
+<p>
+            This method provides a way to update a RequestTypeDto.
+<p>
+Both identifiers in method parameters and object's attributes may be
+specified to update the given object. If it's not the case, a
+Response with a <tt>BAD_REQUEST</tt> is returned to
+the client.
+</p>
+          </p>
+<h2>Parameters</h2>
+<table>
+<tr>
+<th>name</th>
+<th>description</th>
+<th>type</th>
+<th>default</th>
+</tr>
+<tr>
+<td>id</td>
+<td>
+            The UserTypeDto identifier.
+          </td>
+<td>path</td>
+<td/>
+</tr>
+</table>
+<h2>Input Payload</h2>
+<table>
+<tr>
+<th>element</th>
+<th>consumeable content type(s)</th>
+</tr>
+<tr>
+<td>
+<a href="data_ns0.html#element_requestTypeDto">requestTypeDto (XML)</a>
+</td>
+<td>
+<ul>
+<li>application/json</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th colspan="2">description</th>
+</tr>
+<tr>
+<td colspan="2">The RequestTypeDto to update.</td>
+</tr>
+</table>
+<h2>Output Payload</h2>
+<table>
+<tr>
+<th>element</th>
+<th>produceable content type(s)</th>
+</tr>
+<tr>
+<td>(custom)</td>
+<td>
+<ul>
+<li>*/*</li>
+<li>application/xml (alternative mount point: <a href="./xml/request-types/{id}">/xml</a>)</li>
+<li>application/json (alternative mount point: <a href="./json/request-types/{id}">/json</a>)</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th colspan="2">description</th>
+</tr>
+<tr>
+<td colspan="2">A Response with the status <tt>OK</tt>.</td>
+</tr>
+</table>
+</div>
+<div class="item">
+<h1>
+<a name="DELETE">DELETE</a>
+</h1>
+<p>
+            This method provides a way to delete a RequestTypeDto
+by its identifier.
+          </p>
+<h2>Parameters</h2>
+<table>
+<tr>
+<th>name</th>
+<th>description</th>
+<th>type</th>
+<th>default</th>
+</tr>
+<tr>
+<td>id</td>
+<td>
+            The identifier of a RequestTypeDto.
+          </td>
+<td>path</td>
+<td/>
+</tr>
+</table>
+<h2>Output Payload</h2>
+<table>
+<tr>
+<th>element</th>
+<th>produceable content type(s)</th>
+</tr>
+<tr>
+<td>(custom)</td>
+<td>
+<ul>
+<li>*/*</li>
+<li>application/xml (alternative mount point: <a href="./xml/request-types/{id}">/xml</a>)</li>
+<li>application/json (alternative mount point: <a href="./json/request-types/{id}">/json</a>)</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th colspan="2">description</th>
+</tr>
+<tr>
+<td colspan="2">A Response with the status <tt>OK</tt></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sidenav">
+<h1>/request-types/{id}</h1>
+<ul>
+<li>
+<a href="#GET">GET</a>
+</li>
+<li>
+<a href="#PUT">PUT</a>
+</li>
+<li>
+<a href="#DELETE">DELETE</a>
+</li>
+</ul>
+<h1>Home</h1>
+<ul>
+<li>
+<a href="index.html">Introduction</a>
+</li>
+<li>
+<a href="downloads.html">downloads</a>
+</li>
+</ul>
+<h1>REST Endpoints</h1>
+<ul>
+<li>
+<a href="rest.detailed-users.html">/detailed-users</a>
+</li>
+<li>
+<a href="rest.request-types.html">/request-types</a>
+</li>
+<li>
+<a href="rest.request-types.id.html">/request-types/{id}</a>
+</li>
+<li>
+<a href="rest.users.html">/users</a>
+</li>
+<li>
+<a href="rest.users.email.html">/users/{email}</a>
+</li>
+<li>
+<a href="rest.users.id.html">/users/{id}</a>
+</li>
+<li>
+<a href="rest.users.id.password.html">/users/{id}/password</a>
+</li>
+<li>
+<a href="rest.users.userId.requests.html">/users/{userId}/requests</a>
+</li>
+<li>
+<a href="rest.users.userId.requests.id.html">/users/{userId}/requests/{id}</a>
+</li>
+<li>
+<a href="rest.user-types.html">/user-types</a>
+</li>
+<li>
+<a href="rest.user-types.id.html">/user-types/{id}</a>
+</li>
+</ul>
+<h1>XML Data Elements</h1>
+<ul>
+<li>
+<a href="data_ns0.html#element_constraintViolation">constraintViolation</a>
+</li>
+<li>
+<a href="data_ns0.html#element_detailedUserDto">detailedUserDto</a>
+</li>
+<li>
+<a href="data_ns0.html#element_requestDto">requestDto</a>
+</li>
+<li>
+<a href="data_ns0.html#element_requestStatusDto">requestStatusDto</a>
+</li>
+<li>
+<a href="data_ns0.html#element_requestTypeDto">requestTypeDto</a>
+</li>
+<li>
+<a href="data_ns0.html#element_userDto">userDto</a>
+</li>
+<li>
+<a href="data_ns0.html#element_userTypeDto">userTypeDto</a>
+</li>
+</ul>
+<h1>XML Data Types</h1>
+<ul>
+<li>
+<a href="data_ns0.html#constraintViolation">constraintViolation</a>
+</li>
+<li>
+<a href="data_ns0.html#detailedUserDto">detailedUserDto</a>
+</li>
+<li>
+<a href="data_ns0.html#requestDto">requestDto</a>
+</li>
+<li>
+<a href="data_ns0.html#requestStatusDto">requestStatusDto</a>
+</li>
+<li>
+<a href="data_ns0.html#requestTypeDto">requestTypeDto</a>
+</li>
+<li>
+<a href="data_ns0.html#userDto">userDto</a>
+</li>
+<li>
+<a href="data_ns0.html#userTypeDto">userTypeDto</a>
+</li>
+</ul>
+</div>
+<div class="clearer">
+<span/>
+</div>
+</div>
+<div class="footer" align="center">
+      Generated by <a href="http://enunciate.codehaus.org">Enunciate</a>. Template design by <a href="http://templates.arcsin.se">Arcsin</a>.
+    </div>
+</div>
+</body>
+</html>

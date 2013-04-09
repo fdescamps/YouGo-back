@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<!-- Activation du scan des annotations du type @Service -->
+	<context:component-scan base-package="com.ineatconseil.yougo.security"/>
+	
+	<!-- Gestion des annotations spécifiques à la sécurité @RolesAllowed / @PermitAll -->
+	<security:global-method-security jsr250-annotations="enabled" />
+	
+	<!-- Obligatoire dans le contexte de Jersey sinon l'injection ne fonctionne plus -->
+	<aop:aspectj-autoproxy proxy-target-class="true"/>
+	
+	<security:http auto-config="true" realm="YouGO Authentication">
+		<security:http-basic />
+		<security:remember-me />
+	</security:http>
+
+	<security:authentication-manager>
+		<security:authentication-provider user-service-ref="userDetailsService" />
+	</security:authentication-manager>
+
+</beans:beans>
