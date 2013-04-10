@@ -154,12 +154,12 @@
 			<scope>test</scope>
 		</dependency>
 		
-		<!-- CloudFoundry -->
+		<!-- CloudFoundry 
 		<dependency>
 			<groupId>org.cloudfoundry</groupId>
 			<artifactId>cloudfoundry-runtime</artifactId>
 			<version>${org.cloudfoundry-version}</version>
-		</dependency>
+		</dependency>-->
 
 	</dependencies>
 </project>
