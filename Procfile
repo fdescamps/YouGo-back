@@ -1,1 +1,1 @@
-web: sh yougo-web/target/yougo-rest.war
+web: java yougo-web/target/yougo-rest.war
