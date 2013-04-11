@@ -15,7 +15,7 @@ public class CloudApplicationContextInitializer implements ApplicationContextIni
 			applicationContext.getEnvironment().setActiveProfiles("default");
 		}
 		*/
-		applicationContext.getEnvironment().setActiveProfiles("cloud");
+		applicationContext.getEnvironment().setActiveProfiles("default");
 	}
 
 }
