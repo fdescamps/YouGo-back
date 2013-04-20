@@ -9,27 +9,31 @@
 			<param name="ConversionPattern" value="%-5p: %c - %m%n" />
 		</layout>
 	</appender>
+
+    <logger name="com.ineatconseil.yougo.security">
+        <level value="DEBUG" />
+    </logger>
 	
 	<!-- Application Loggers -->
 	<logger name="org.cloudfoundry.services">
-		<level value="info" />
+		<level value="DEBUG" />
 	</logger>
 	
 	<!-- 3rdparty Loggers -->
 	<logger name="org.springframework.core">
-		<level value="info" />
+		<level value="DEBUG" />
 	</logger>
 	
 	<logger name="org.springframework.beans">
-		<level value="info" />
+		<level value="DEBUG" />
 	</logger>
 	
 	<logger name="org.springframework.context">
-		<level value="info" />
+		<level value="DEBUG" />
 	</logger>
 
 	<logger name="org.springframework.web">
-		<level value="info" />
+		<level value="DEBUG" />
 	</logger>
 
 	<!-- Root Logger -->
