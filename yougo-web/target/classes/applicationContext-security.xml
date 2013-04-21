@@ -14,16 +14,23 @@
 	<!-- Activation du scan des annotations du type @Service -->
 	<context:component-scan base-package="com.ineatconseil.yougo.security"/>
 	
-	<!-- Gestion des annotations spécifiques à la sécurité @RolesAllowed / @PermitAll
-	<security:global-method-security jsr250-annotations="enabled" />     -->
+	<!-- Gestion des annotations spécifiques à la sécurité @RolesAllowed / @PermitAll -->
+	<security:global-method-security jsr250-annotations="enabled" />
 	
 	<!-- Obligatoire dans le contexte de Jersey sinon l'injection ne fonctionne plus -->
 	<aop:aspectj-autoproxy proxy-target-class="true"/>
-	
-	<security:http auto-config="true" realm="YouGO Authentication">
-		<security:http-basic />
+
+	<!----><security:http auto-config="true" realm="YouGO Authentication">
+		<security:http-basic/>
 		<security:remember-me />
 	</security:http>
+
+    <!--
+    <security:http auto-config="true" realm="YouGO API Authentication" pattern="/api/**" security="none"/>
+    <security:http auto-config="true" realm="YouGO Authentication" pattern="/**">
+        <intercept-url pattern="/**" access="ROLE_USER" />
+        <security:remember-me />
+    </security:http> -->
 
 	<security:authentication-manager>
 		<security:authentication-provider user-service-ref="userDetailsService" />
